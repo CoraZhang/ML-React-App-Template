@@ -103,10 +103,15 @@ class App extends Component {
                   name="select1"
                   onChange={this.handleChange}
                 >
-                  <option>0-17</option>
-                  <option>18-29</option>
-                  <option>30-49</option>
-                  <option>50+</option>
+                  <option>0-10</option>
+                  <option>10-20</option>
+                  <option>30-40</option>
+                  <option>40-50</option>
+                  <option>60-70</option>
+                  <option>70-80</option>
+                  <option>80-90</option>
+                  <option>90-100</option>
+                  <option>100+</option>
                 </Form.Control>
               </Form.Group>
               <Form.Group as={Col}>
@@ -133,9 +138,9 @@ class App extends Component {
                 >
                   <option> Caucasian</option>
                   <option> Asian</option>
-                  <option>African American</option>
-                  <option>Hispanic</option>
-                  <option>Other</option>
+                  <option> African American</option>
+                  <option> Hispanic</option>
+                  <option> Other</option>
                 </Form.Control>
               </Form.Group>
             </Form.Row>

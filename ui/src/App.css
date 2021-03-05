@@ -1,7 +1,8 @@
 html, body {
-  background: url('https://s3-us-west-2.amazonaws.com/techvibes/wp-content/uploads/2017/09/20163851/pointclickcare.png') center center no-repeat;
-  background-size: cover;
-  color: white;
+  background: url('https://www.saimgs.com/imglib/products/logos-hq/logo_4571_hq.png?v=57a84c674ba6349769a1715a86f7550d') left top no-repeat;
+background-size: 300px 100px;
+  background-color:  rgba(232, 232, 232, 1);
+  color: grey;
   height: 100%;
   width: 100%;
 }
@@ -11,24 +12,19 @@ html, body {
   margin-top: 20px;
   width: 70%;
   height: auto;
-  background-color: #fff;
+  background-color:white;
   padding: 20px;
   border-radius: 8px;
-  opacity: 0.5;
-}
-
-.content:hover{
-  opacity: 1;
 }
 
 .title {
   padding-top: 100px;
   text-align: center;
-  text-transform: uppercase;
+  
   font-weight: 600;
-  font-size: 4em;
+  font-size: 1.5em;
   letter-spacing: 0.15rem;
-  color: #fff;
+  color:grey;
 }
 
 label {
