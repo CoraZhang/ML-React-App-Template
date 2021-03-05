@@ -68,68 +68,74 @@ class App extends Component {
     return (
       <Container>
         <div>
-          <h1 className="title">ML React App</h1>
+          <h1 className="title"> Readmission Prediction App</h1>
         </div>
         <div className="content">
           <Form>
             <Form.Row>
               <Form.Group as={Col}>
                 <Form.Label>Text Field 1</Form.Label>
-                <Form.Control 
-                  type="text" 
-                  placeholder="Text Field 1" 
+                <Form.Control
+                  type="text"
+                  placeholder="Name"
                   name="textfield1"
                   value={formData.textfield1}
-                  onChange={this.handleChange} />
+                  onChange={this.handleChange}
+                />
               </Form.Group>
               <Form.Group as={Col}>
                 <Form.Label>Text Field 2</Form.Label>
-                <Form.Control 
-                  type="text" 
-                  placeholder="Text Field 2" 
+                <Form.Control
+                  type="text"
+                  placeholder="Patient number"
                   name="textfield2"
                   value={formData.textfield2}
-                  onChange={this.handleChange} />
+                  onChange={this.handleChange}
+                />
               </Form.Group>
             </Form.Row>
             <Form.Row>
               <Form.Group as={Col}>
-                <Form.Label>Select 1</Form.Label>
-                <Form.Control 
+                <Form.Label>Age</Form.Label>
+                <Form.Control
                   as="select"
                   value={formData.select1}
                   name="select1"
-                  onChange={this.handleChange}>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
+                  onChange={this.handleChange}
+                >
+                  <option>0-17</option>
+                  <option>18-29</option>
+                  <option>30-49</option>
+                  <option>50+</option>
                 </Form.Control>
               </Form.Group>
               <Form.Group as={Col}>
-                <Form.Label>Select 2</Form.Label>
-                <Form.Control 
+                <Form.Label>A1c Test Result</Form.Label>
+                <Form.Control
                   as="select"
                   value={formData.select2}
                   name="select2"
-                  onChange={this.handleChange}>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
+                  onChange={this.handleChange}
+                >
+                  <option>None</option>
+                  <option> Greater than 8 </option>
+                  <option> Greater than 7</option>
+                  <option>Normal</option>
                 </Form.Control>
               </Form.Group>
               <Form.Group as={Col}>
-                <Form.Label>Select 3</Form.Label>
-                <Form.Control 
+                <Form.Label>Race</Form.Label>
+                <Form.Control
                   as="select"
                   value={formData.select3}
                   name="select3"
-                  onChange={this.handleChange}>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
+                  onChange={this.handleChange}
+                >
+                  <option> Caucasian</option>
+                  <option> Asian</option>
+                  <option>African American</option>
+                  <option>Hispanic</option>
+                  <option>Other</option>
                 </Form.Control>
               </Form.Group>
             </Form.Row>
@@ -139,8 +145,9 @@ class App extends Component {
                   block
                   variant="success"
                   disabled={isLoading}
-                  onClick={!isLoading ? this.handlePredictClick : null}>
-                  { isLoading ? 'Making prediction' : 'Predict' }
+                  onClick={!isLoading ? this.handlePredictClick : null}
+                >
+                  {isLoading ? "Making prediction" : "Predict"}
                 </Button>
               </Col>
               <Col>
@@ -148,19 +155,20 @@ class App extends Component {
                   block
                   variant="danger"
                   disabled={isLoading}
-                  onClick={this.handleCancelClick}>
+                  onClick={this.handleCancelClick}
+                >
                   Reset prediction
                 </Button>
               </Col>
             </Row>
           </Form>
-          {result === "" ? null :
-            (<Row>
+          {result === "" ? null : (
+            <Row>
               <Col className="result-container">
                 <h5 id="result">{result}</h5>
               </Col>
-            </Row>)
-          }
+            </Row>
+          )}
         </div>
       </Container>
     );
